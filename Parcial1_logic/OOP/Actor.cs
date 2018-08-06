@@ -2,5 +2,7 @@
 {
     public abstract class Actor
     {
+        protected float BaseAtk;
+        protected float BaseDef;
     }
 }
