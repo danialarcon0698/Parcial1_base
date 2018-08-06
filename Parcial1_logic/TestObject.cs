@@ -31,6 +31,20 @@ namespace Parcial1_logic
         public Queue<int> ReplaceInQueue(Queue<int> inputQueue, int lookupValue, int replaceValue)
         {
             //NOTA: Para la solución NO SE PERMITE USAR el método ToArray().
+            foreach (int value in inputQueue)
+            {
+                int i = 0;
+                inputQueue.Dequeue();
+                if(value == lookupValue)
+                {
+                    i = i + 1;
+                }
+                if (i > 1)
+                {
+                    inputQueue.Enqueue(replaceValue);
+                }
+                inputQueue.Enqueue(value);
+            }
 
             return null;
         }
@@ -42,6 +56,15 @@ namespace Parcial1_logic
         /// <returns>Una pila con los valores de 'stack' invertidos</returns>
         public Stack<string> InverseStack(Stack<string> stack)
         {
+            foreach (string valueStack in stack)
+            {
+                stack.Pop();  
+            }
+
+            foreach (string valueStackInverted in stack)
+            {
+                stack.Push;
+            }
             //NOTA: Para la solución NO SE PERMITE USAR el método ToArray().
             return null;
         }
@@ -53,8 +76,24 @@ namespace Parcial1_logic
         /// <param name="stack">La pila que contiene parte de los datos</param>
         /// <param name="queue">La cola que contiene parte de los datos</param>
         /// <returns>Una lista con datos intercalados de 'stack' y 'queue'</returns>
+        
         public List<string> MixData(Stack<string> stack, Queue<string> queue)
         {
+            
+            foreach (string valueInStack in stack)
+            {
+                stack.Pop();
+                MixData.Add(valueInStack);
+
+            }
+
+            foreach (string valueInQueue in queue)
+            {
+                queue.Dequeue();
+                MixData.Add(valueInQueue);
+            }
+
+           
             //NOTA: Para la solución NO SE PERMITE USAR el método ToArray().
             return null;
         }
@@ -69,6 +108,11 @@ namespace Parcial1_logic
         /// <returns></returns>
         public int RepeatedTimesInDictionary<Type1, Type2>(Dictionary<Type1, Type2> dict, Type2 lookupValue)
         {
+            
+         if (dict.ContainsKey(lookupValue))
+            {
+                return 0;
+             }
             return -1;
         }
 
