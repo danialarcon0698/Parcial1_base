@@ -1,0 +1,20 @@
+Feedback:
+
+1. Estructuras de Datos (0.0/2.5)
+ * Todas las implementaciones retornan valores inválidos a los enunciados; por tanto ninguna sirve.
+ * Hay mal llamado de funciones en todas las implementaciones.
+ * ReplaceQueue() no puede funcionar porque al hacer Dequeue(), las iteraciones del 'foreach' se dañan, al cambiar el tamaño de la colección a iterar.
+ * MixData() se usa como si fuera una pila y una cola, cuando es el nombre de la función misma a resolver.
+ * En InverseStack() solo se sacan los elementos de la pila. Cuando llega el segundo 'foreach', no hay nada qué iterar. Además, el primero tiene el mismo problema mencionado arriba.
+ * En RepeatedTimesInDictionary() se pregunta por el valor del Key, no del Value como dice el enunciado.
+
+ 2. OOP (1.5/2.5)
+ * ICharacter.Move no necesita parámetro. Además, las implementaciones de la función no hacen uso de ese parámetro.
+ * Actor.cs no implementa la interfaz ICharacter.
+ * Enemy solo implementa la interfaz ICharacter. Al no derivar de Actor.cs, no satisface el enunciado.
+ * Hero.cs utiliza mal la estructura jerárquica definida en el enunciado. No es Hero quien debe definir los valores máximos de los modificadores de los Gear equipados.
+ * Gear.cs no es un actor,  según el enunciado. Además, la implementación tampoco satisface que los únicos Gear que existan sean Weapon y Armor.
+ * Qué son los atributos W y A en Gear.cs?
+ * Hero.CurrentAtk y Hero.CurrentDef no tienen en cuenta los atributos del Gear asociado, sino que lo  leen todo de atributos del Hero.
+
+Total: 1.5/5.0
